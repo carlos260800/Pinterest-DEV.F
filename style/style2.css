@@ -92,6 +92,11 @@ body {
     max-width: 100%;
 }
 
+.imagen:hover{
+    /* filter:blur(1px); */
+    filter: brightness(50%); // Más oscura
+}
+
 .fondo-imagen{
     padding: 1rem;
     /* background-color: #e60023; */
