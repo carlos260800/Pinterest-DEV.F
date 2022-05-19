@@ -61,7 +61,7 @@ body {
 
 .barra-busqueda {
     border-radius: 2rem;
-    width: 80rem;
+    width: 100rem;
     font-size: 2rem;
     background-color: #E1E1E1;
     border-style: none;
@@ -83,8 +83,7 @@ body {
     /* grid-template-columns: repeat(auto-fill, 330px); */
     /* grid-template-rows: masonry;  */
 
-    columns:5 260px;
-    
+    columns:5 260px;  
 }
 
 .imagen{
@@ -94,7 +93,7 @@ body {
 
 .imagen:hover{
     /* filter:blur(1px); */
-    filter: brightness(50%); // Más oscura
+    filter: brightness(50%); 
 }
 
 .fondo-imagen{
@@ -111,3 +110,4 @@ body {
 .footer{
     padding-top: 2rem;
 }
+
