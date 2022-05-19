@@ -27,7 +27,7 @@
                 <a class="border-nav-elements items-navbar" target="_blank" href="https://about.pinterest.com/es">Info</a>
                 <a class="border-nav-elements items-navbar" target="_blank" href="https://business.pinterest.com/es/">Empresa</a>
                 <a class="border-nav-elements items-navbar" target="_blank" href="https://newsroom.pinterest.com/es">Blog</a>
-                <button class="boton-log">Iniciar sesión</button>
+                <button onclick="baja()" class="boton-log pointer">Iniciar sesión</button>
                 <button class="boton-reg">Registrarse</button>
             </div>
         </nav>
@@ -130,22 +130,38 @@
     <div id="form-register">
         <div id="miModal" class="modal">
             <p class="texto-registrate-form">Regístrate para ver ideas</p>
+            <div class="footer">
+                <div class="contenido-footer text-center text-bold">
+                    <a class="text-black" href="https://policy.pinterest.com/es/terms-of-service">Términos del servicio</a>
+                    <a class="text-black" href="https://policy.pinterest.com/es/privacy-policy">Política de privacidad</a>
+                    <a class="text-black" href="https://www.pinterest.com.mx/_/_/help">Ayuda</a>
+                    <a class="text-black" href="https://itunes.apple.com/us/app/pinterest/id429047995">Aplicación para iPhone</a>
+                    <a class="text-black" href="https://play.google.com/store/apps/details?id=com.pinterest">Aplicación para Android</a>
+                    <a class="text-black" href="https://www.pinterest.com.mx/html_sitemap/pinners_a.html">Usuarios</a>
+                    <a class="text-black" href="https://www.pinterest.com.mx/html_sitemap/boards_a.html">Colecciones</a>
+                    <a class="text-black" href="https://www.pinterest.com.mx/today">Hoy</a>
+                    <a class="text-black" href="https://www.pinterest.com.mx/ideas">Explora</a>
+                </div>
+            </div>
             <div class="modal-contenido">
                 <img class="logo-tam" src="img/pinterest-logo.svg" alt="">
                 <h2>Bienvenido a Pinterest</h2>
                 <form>
-                    <input class="inputs-form" type="text" id="fname" name="fname" placeholder="Correo"><br>
-                    <input class="inputs-form" type="text" id="fname" name="fname" placeholder="Contraseña"><br>
+                    <input class="inputs-form" type="text" id="correoInput" name="fname" placeholder="Correo"><br>
+                    <p id="AlertaCorreo" style="font-size: 0.7rem;"></p>
+                    <input class="inputs-form" type="password" id="contraInput" name="fname" placeholder="Contraseña"><br>
+                    <p id="AlertaContra" style="font-size: 0.7rem;"></p>
                 </form>
+
                 <a class="text-decoration-none text-bold" href=#>¿Olvidaste tu contraseña?</a>
-                <button class="boton-log2">Iniciar sesión</button>
+                <button onclick="redirecciona()" class="boton-log2 pointer">Iniciar sesión</button>
                 <p class="text-center text-bold" style="font-size: 1.2rem;">o</p>
-                <button class="boton-facebook" style="display: grid;grid-template-columns: auto auto;">
+                <button class="boton-facebook pointer" style="display: grid;grid-template-columns: auto auto;">
                     <svg style="max-width:30px;  padding-top: 0.4rem; padding-left: 1rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
                     <p style="margin-right:2rem; margin-top: 0.8rem;">Continuar con Facebook</p>
                 </button>
                 <br>
-                <button class="boton-google"style="display: grid;grid-template-columns: auto auto;padding-top: 12px;"><i style="max-width:30px;  padding-top: 0rem; padding-left: 1rem;" class="fa fa-google"></i><P style="margin-right:2rem; margin-top: 0rem;">Continuar con Google</P></button>
+                <button class="boton-google pointer"style="display: grid;grid-template-columns: auto auto;padding-top: 12px;"><i style="max-width:30px;  padding-top: 0rem; padding-left: 1rem;" class="fa fa-google"></i><P style="margin-right:2rem; margin-top: 0rem;">Continuar con Google</P></button>
                 <p class="text-form-priv text-center">Si continúas, aceptas los <a class="text-bold text-decoration-none" href="https://policy.pinterest.com/es/terms-of-service" target="_blank">Términos del servicio</a> de Pinterest y confirmas que has leído nuestra<a class="text-bold text-decoration-none" href="https://policy.pinterest.com/es/privacy-policy" target="_blank"> Política de privacidad</a></p>
                 <div style="border-bottom: 1px solid rgb(222, 222, 222); margin: 10px auto; width: 110px;"></div>
                 <p class="text-form-priv text-center"><a class="text-bold text-decoration-none" href="">¿Aún no estás en Pinterest? Regístrate</a></p>
@@ -190,6 +206,26 @@
             }
             
         }); 
+        }
+        function baja(){
+            window.scroll({
+                    top: 1287,
+                    left: 0,
+                    behavior: 'auto',
+                });
+        }
+        function redirecciona(){
+            var correoInput = document.getElementById("correoInput").value;
+            var contraInput = document.getElementById("contraInput").value;
+            if(correoInput == ""){
+                document.getElementById("AlertaCorreo").innerHTML = "¡Te has saltado algo! No te olvides de añadir tu dirección de correo electrónico.";
+            }else{document.getElementById("AlertaCorreo").innerHTML = "";}
+            if(contraInput == ""){
+                document.getElementById("AlertaContra").innerHTML = "¡Te has saltado algo! No te olvides de escribir tu contraseña.";
+            }else{document.getElementById("AlertaContra").innerHTML = "";}
+            if(correoInput != "" && contraInput != ""){
+                location.assign("/views/imagenes.html");
+            }
         }
     </script>
     <script>
