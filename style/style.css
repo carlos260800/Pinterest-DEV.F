@@ -1,0 +1,263 @@
+:root{
+    --rojo-pinterest:#e60023;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+button {
+    border: none;
+}
+
+button:focus {
+    border: none;
+    outline: none;
+}
+
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.text-center{
+    text-align: center;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+.column {
+    flex: 10%;
+    max-width: 10%;
+    padding: 0 2.2rem;
+}
+  
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    max-width: 14rem;
+    border-radius: 1.8rem;
+    columns:5 260px;
+}
+.separacion1{
+    padding-top: 7rem;
+}
+.separacion2{
+    padding-top: 14rem;
+}
+.separacion3{
+    padding-top: 21rem;
+}
+
+.logo-tam{
+    max-height: 2rem;
+}
+
+.logo-text{
+    margin: 0.4rem 0.2rem;
+    font-size: 20px;
+}
+
+.logo{
+    color: var(--rojo-pinterest);
+    flex-direction: row;
+}
+
+.space{
+    justify-content: space-between;
+}
+
+.border-nav-elements{
+    margin: 0.8rem;
+}
+
+.navbar-props{
+    margin: 1.5rem;
+}
+
+.items-navbar{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.boton-log{
+    background-color:var(--rojo-pinterest);
+    border-radius: 20px;
+    color: white;
+    border-color: var(--rojo-pinterest);
+    margin-left: .5rem;
+    margin-right: .5rem;
+    max-height: 2.5rem;
+    font-weight: bold;
+}
+.boton-reg{
+    background-color:#E2E2E2;
+    border-radius: 20px;
+    color: black;
+    border-color: #E2E2E2;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    max-height: 2.5rem;
+    font-weight: bold;
+    
+}
+.container{
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.img-views{
+    padding: 1rem;
+}
+.text-pres1{
+    margin-top: 9rem;
+    font-size: 3.8rem;
+    margin-bottom: 0.1rem;
+}
+.text-pres2{
+    font-size: 3.8rem;
+    margin-top: 0.1rem;
+    color: rgb(194, 139, 0);
+}
+
+.puntos{
+    background-color: red;
+    max-width: 0.5rem;
+    max-height: 0.5rem;
+    color: white;
+    border-radius: 1rem;
+}
+
+.button-up{
+    border-radius: 100%;
+    width: 3rem;
+    height: 3rem;
+    margin-top: 2rem;
+    background-color: #618C7B;
+    opacity: 1;
+    position: absolute;
+    z-index: 2;
+    top: 83rem;
+    left: 50%;
+}
+.arrow{
+    color: white;
+    margin-top: 1rem;
+    margin-left: 1.1rem;
+}
+
+.button-down{
+    border-radius: 100%;
+    width: 3rem;
+    height: 3rem;
+    margin-top: 2rem;
+    background-color: #618C7B;
+    opacity: 1;
+    position: absolute;
+    z-index: 2;
+    top: 57rem;
+    left: 50%;
+}
+
+
+.modal-contenido{
+    background-color:white;
+    width:300px;
+    padding:30px 84px 25px 84px;
+    margin: 10% 59%;
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0px 1px black, -.1rem 0 1rem black;
+  }
+  .modal{
+    background-color: rgba(0,0,0,.5);
+    position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    opacity:0;
+    pointer-events:none;
+    transition: all 1s;
+    z-index: 1;
+  }
+  #miModal:target{
+    opacity:1;
+    pointer-events:auto;
+  }
+
+.inputs-form{
+    appearance: none;
+    border-radius: 16px;
+    border-style: solid;
+    border-width: 2px;
+    min-height: 48px;
+    border-color: #cdcdcd;
+    padding: 8px 16px;
+    box-sizing: border-box;
+    margin-bottom: 7px;
+    width: 100%;
+}
+
+.boton-log2{
+    background-color:var(--rojo-pinterest);
+    border-radius: 20px;
+    color: white;
+    border-color: var(--rojo-pinterest);
+    margin-left: .5rem;
+    margin-right: .5rem;
+    max-height: 2.5rem;
+    font-weight: bold;
+    padding: 1rem;
+    width: 100%;
+}
+.boton-facebook{
+    background-color:#1877F2;
+    border-radius: 20px;
+    color: white;
+    border-color: #1877F2;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    max-height: 2.5rem;
+    font-weight: bold;
+    padding: 0rem;
+    width: 100%;
+}
+.boton-google{
+    background-color:white;
+    border-radius: 20px;
+    color: black;
+    border-color: black;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    max-height: 2.5rem;
+    font-weight: bold;
+    padding: 1rem;
+    border: 1px solid #dadce0;
+    width: 100%;
+}
+
+.text-form-priv{
+    font-size: 0.85rem;
+}
+.text-bold{
+    font-weight: bold;
+    color: black;
+}
+.text-decoration-none{
+    text-decoration: none;
+}
+
+.texto-registrate-form{
+    left: 14%;
+    position: absolute;
+    top: 39%;
+    color: white;
+    font-size: 4.5rem;
+    width: 20rem;
+}
